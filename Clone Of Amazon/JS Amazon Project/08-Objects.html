@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    // const cheack = {
+    //   name: 'mudasir',
+    //   address: 'peshawar',
+
+    //   num: {
+    //     rollNo: 231163,
+    //     CGPA: 3.38,
+    //   },
+
+    //   fun: function func1() {
+    //     console.log('Inside the function:');
+    //   }
+
+    // };
+    // // Calling to the Object
+    // console.log(cheack.name = 'Maaz');
+    // console.log(cheack.num.CGPA);
+    // console.log(cheack.name = 'Gulalai');
+    // console.log(delete name);
+    // console.log(cheack.name);
+    // console.log(cheack.fun('hello'));
+
+    // // Conver from JS to JSON.
+    // console.log(JSON.stringify(cheack));
+    // const joinString = JSON.stringify(cheack);
+
+    // // Conver from JSON to JS.
+    // console.log(JSON.parse(joinString));
+
+    let obj1 = {
+      message: 'Salamualaikum',
+      // method : function function1() {
+      //   console.log('Method');
+      // }
+
+      method() {
+        console.log('Method');
+      }
+    };
+
+    // const message = obj1.message;
+    // console.log(message);
+
+    const  {message} = obj1;
+    console.log(message);
+
+    obj1.method();
+
+
+    // Return And Parameters.
+
+    function fun1() {
+      if(sum <= 50) {
+        console.log('Normal Case');
+      } else if(sum > 50) {
+        console.log('Have a Problem');
+      }
+      return sum;
+    }
+
+    let num = 30, num2 = 30, sum = 0;
+    sum = num + num2;
+    fun1();
+
+
+    const pro1 = {
+      name: 'basketBall',
+      price: 2399,
+      // 'delivery-time': '3days'
+    }
+
+    // console.log(pro1);
+    // pro1.price = 2095 + 500;
+    // console.log(pro1);
+
+    const pro2 = {
+      name: 'footBall',
+      price: 2399,
+    }
+
+    function camparePrices() {
+
+      if(pro1.price > pro2.price) {
+        console.log(`Product2: {${pro2.price}} is cheeper then Product1: {${pro1.price}}`);
+      } else if(pro1.price < pro2.price) {
+        console.log(`Product1: {${pro1.price}} is cheeper then Product2: {${pro2.price}}`);
+      } else if(pro1.price === pro2.price) {
+        console.log(`Product1: {${pro2.price}} is equal to Product2: {${pro1.price}}`);
+      }
+      return pro1.price, pro2.price;
+    }
+
+    pro1.price;
+    pro2.price;
+    camparePrices();
+  </script>
+</body>
+</html>

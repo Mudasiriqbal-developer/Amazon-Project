@@ -1,0 +1,51 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  margin: 10px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-family: Arial;
+}
+
+.move-icone {
+  height: 50px;
+}
+
+#rock, #paper, #scissors {
+  background-color: transparent;
+  border: 3px solid white;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#reset, #autoPlay {
+  height: 45px;
+  width: 140px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  margin: 10px;
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: Arial;
+  margin-top: 50px;
+  margin-left: 10px
+}
+
+#move{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.is-stop {
+  background-color: greenyellow;
+}

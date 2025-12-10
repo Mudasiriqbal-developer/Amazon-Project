@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 06</title>
+</head>
+<body>
+  <p id="para">Salam</p>
+  <script>
+    let input = document.querySelector('#input');
+    let para = document.querySelector('#para');
+
+    let hours = 23;
+    let name = 'Gulalai';
+    if(hours >= 6 && hours <= 12) {
+      para.innerHTML = `Good Morning ${name}.`;
+    } else if(hours >= 13 && hours <= 17) {
+      para.innerHTML = `Good Evening ${name}.`;
+    } else {
+      para.innerHTML = `Good Night ${name}.`;
+    }
+  </script>
+</body>
+</html>

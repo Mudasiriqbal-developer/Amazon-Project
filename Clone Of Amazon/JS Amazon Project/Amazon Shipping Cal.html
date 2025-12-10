@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Shipping Calculator</title>
+  <style>
+    .subscribe {
+      height: 40px;
+      width: 120px;
+      font-size: 1.2rem;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .is-subscribe {
+      height: 40px;
+      width: 120px;
+      font-size: 1.2rem;
+      background-color: rgb(240, 240, 240);
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>YouTube Subscribe Button</h2> 
+  <button class="subscribe">Subscribe</button>
+
+
+  <h2>Amazon Shipping Calculator</h2>
+  <p>Order Under $40 = +$10 Shipping</p>
+  <p>Order Over $40 = Free Shipping</p>
+  <input placeholder="Order Cost" id="input">
+  <button id="cal">Calculate</button>
+  <p id="total"></p>
+  <script>
+
+    let subscribe = document.querySelector('.subscribe');
+    let input = document.querySelector('#input')
+    let total = document.querySelector('#total');
+    let cal = document.querySelector('#cal');
+
+
+    subscribe.addEventListener('click', () => {
+
+      if(subscribe.innerText = 'Subscribe') {
+       subscribe.innerHTML = 'Subscribed';
+       subscribe.classList.add('is-subscribe');
+      } 
+      subscribe.addEventListener('click', () => {
+        if(subscribe.innerText = 'Subscribed') {
+          subscribe.innerHTML = 'Subscribe';
+          subscribe.classList.remove('is-subscribe');
+        }
+
+      });
+    });
+
+
+    function calculate() {
+      if(input.value <= 40 && input.value > 0) {
+        total.innerHTML = '$' + (Number(input.value) + 10);
+      } else if(input.value > 40) {
+        total.innerHTML = '$' +  (input.value)
+      } else if(input.value < 0) {
+        total.innerHTML = 'Error: Cost can\'t be less then $0.'
+    }
+  }
+
+    cal.addEventListener('click', () => {
+      calculate();
+    });
+
+    // Add Enter key functionality.
+    input.addEventListener('keydown', (event) => {
+      if(event.key === 'Enter') {
+        calculate();
+      }
+    })
+  </script>
+</body>
+</html>

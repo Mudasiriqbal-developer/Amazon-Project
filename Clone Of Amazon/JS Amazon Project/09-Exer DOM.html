@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <input id="input">
+  <button id="submit">Submit</button>
+  <p id="para"></p>
+  <button id="reset">Reset</button>
+  <p id="para"></p>
+
+  <script>
+    let input = document.querySelector('#input');
+    let submit = document.querySelector('#submit');
+    let para = document.querySelector('#para');
+    let paraa = document.querySelector('#paraa');
+    let reset = document.querySelector('#reset');
+
+    submit.addEventListener('click', () => {
+      para.innerHTML = input.value;
+    });
+
+    input.addEventListener('keydown', () => {
+      para.innerHTML = input.value;
+    });
+
+    reset.addEventListener('click', () => {
+      input.value = '';
+      para.innerHTML = '';
+    });
+
+    paraa.addEventListener('keyup', () => {
+      paraa.innerHTML = input.value;
+    })
+  </script>
+</body>
+</html>

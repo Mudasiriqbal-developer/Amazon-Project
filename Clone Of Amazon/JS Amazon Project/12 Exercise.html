@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12 Exercise</title>
+</head>
+<body>
+  <button class="btn">Start</button>
+  <p class="para"></p> 
+
+  <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit. Ipsa minus qui asperiores unde adipisci molestias temporibus, <br>explicabo laudantium porro dolor, eligendi amet dolores omnis beatae officia<br> reprehenderit fugiat saepe iure!</p>
+  <button class="delete">Delete</button>
+
+  <p class="sms"> Are You sure you want to reset the score?
+    <button class="yes">Yes</button>
+    <button class="no">No</button>
+  </p>
+  <script>
+    let btn = document.querySelector('.btn');
+    let para = document.querySelector('.para');
+    let lorem = document.querySelector('.lorem');
+    let sms = document.querySelector('.sms');
+    let yes = document.querySelector('.yes');
+    let no = document.querySelector('.no');
+    let delet = document.querySelector('.delete');
+
+    // sms.innerHTML = '';
+
+
+    setInterval(function () {
+    },2000);
+
+    delet.addEventListener('click', () => {
+
+        yes.addEventListener('click', () => {
+          lorem.innerHTML = '';
+          sms.innerHTML = '';
+        });
+
+        no.addEventListener('click', () => {
+          sms.innerHTML = '';
+        });
+
+      });
+
+    btn.addEventListener('click', () => {
+
+      setTimeout(function() {
+        btn.innerHTML = 'Finished!';
+        para.classList.add('is-show');
+        para.innerHTML = 'Finished Sucssesfuly';
+      },2000);
+
+      setTimeout(function() {
+        para.innerHTML = '';
+        btn.innerHTML = 'Start';
+      }, 4000);
+
+      btn.innerHTML = 'Laoding....';        
+    });
+
+
+    let arr = [1,-3,5];
+    console.log(arr.filter((value, index) => {
+      return value >= 0;
+    }));
+     
+    console.log([1,-3,5].filter(value => value >= 0));
+
+    let arr2 = [1,1,3];
+    console.log(arr2.map((value, index) => {
+      return value * 2;
+    }));
+
+    console.log([1,1,3].map(value => value * 2));
+
+  </script>
+</body>
+</html>
